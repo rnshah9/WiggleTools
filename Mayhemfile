@@ -1,6 +1,6 @@
-project: rnshah9/wiggletools
+project: wiggletools
 target: wiggletools
 
 cmds:
-  - cmd: /usr/local/bin/wiggletools @@
+  - cmd: /usr/local/bin/wiggletools /test.bed
     filepath: /test.bed
