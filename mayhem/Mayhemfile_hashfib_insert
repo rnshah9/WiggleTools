@@ -1,0 +1,6 @@
+project: wiggletools
+target: hashfib-insert
+
+cmds:
+  - cmd: /fuzz_hashfib_insert
+    libfuzzer: true
