@@ -17,7 +17,6 @@ WORKDIR /WiggleTools
 RUN   make LIBS='-lwiggletools -lBigWig -lcurl -lz -lhts -lm -lgsl -lpthread' 
 # RUN   make test
 RUN rm /WiggleTools/src/wiggletools.o
-RUN rm /WiggleTools/src/wigReader.o
 RUN clang++ src/*.o /WiggleTools/mayhem/fuzz_hashfib_insert.cpp -lpthread -lm -lBigWig -lgsl -lhts -fsanitize=fuzzer,address -I /WiggleTools/src/ -o /fuzz
 
 FROM ubuntu:20.04
